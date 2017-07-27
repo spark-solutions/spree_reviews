@@ -14,7 +14,7 @@ class Spree::FeedbackReviewsController < Spree::StoreController
     end
 
     respond_to do |format|
-      format.html { redirect_to :back  }
+      format.html { redirect_back(fallback_location: root_path)  }
       format.js   { render action: :create }
     end
   end
